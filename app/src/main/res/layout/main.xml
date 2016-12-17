@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="@string/strTitle"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/guessdigitsEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:digits="123456789"
+
+            android:hint="@string/strDigitsHint"
+
+            android:inputType="number"
+
+            android:maxLength="1"
+
+            android:textSize="12dp">
+
+
+            <requestFocus />
+
+        </EditText>
+
+
+        <Button
+
+            android:id="@+id/playornewBtn"
+
+            android:layout_width="60dp"
+
+            android:layout_height="40dp"
+
+            android:text="@string/strPlay"
+
+            android:textSize="12dp" />
+
+
+        <Button
+            android:id="@+id/exitBtn"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="@string/strExit"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/guessnumberEditText"
+            android:layout_width="236dp"
+            android:layout_height="40dp"
+            android:digits="123456789"
+            android:ems="10"
+            android:hint="@string/strGuessHint"
+            android:inputType="number"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/guessBtn"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="@string/strGuess"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="236dp"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:text="@string/strMessage" />
+
+        <Button
+            android:id="@+id/giveupBtn"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/strGiveUp"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/strDash" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/thisscoreTextView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center|left"
+                android:text="@string/strScore" />
+
+            <TextView
+                android:id="@+id/bestscoreTextView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center|left"
+                android:text="@string/strBestScore" />
+
+            <Button
+                android:id="@+id/clearBtn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="@string/strClear"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center|left"
+                android:text="@string/strCopyright" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ListView
+                android:id="@+id/resultListView"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content">
+
+            </ListView>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

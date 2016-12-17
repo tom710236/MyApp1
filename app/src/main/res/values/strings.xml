@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="hello">Hello World, ABGuessNumberGame!</string>
+    <string name="app_name">1A2B猜數字</string>
+    <string name="strTitle">【AB Guess Number Game 猜數字遊戲】</string>
+    <string name="strDigitsHint">請問要玩幾位數的猜數字遊戲</string>
+    <string name="strPlay">開始玩</string>
+    <string name="strExit">離開</string>
+    <string name="strNew">重玩</string>
+    <string name="strGuessHint">請輸入(1..9)不同數字的數</string>
+    <string name="strScore">本次紀錄：</string>
+    <string name="strGuseeCount">已猜數次數：</string>
+    <string name="strGuess">猜看看</string>
+    <string name="strCopyright">Copyright IoT 105A:\nBoris, Boscco, Bug, Tom</string>
+    <string name="strMessage">訊息：</string>
+    <string name="strGiveUp">看答案</string>
+    <string name="strBestScore">最佳紀錄：</string>
+    <string name="strDash">---------------------------------------------------------------</string>
+    <string name="strClear">清除紀錄</string>
+
+</resources>
+
+
