@@ -17,6 +17,9 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -50,6 +53,8 @@ public class ABGuessNumberGame extends Activity {
     private int playDigits, n, m, intBestScore;
 
     private String strAnswerNumber, strOutputString;
+
+
 
 
     @Override
@@ -146,6 +151,15 @@ public class ABGuessNumberGame extends Activity {
             // 執行 【開始玩】 或 【重玩】
 
             public void onClick(View v) {
+
+                //上傳 0 , 0
+                FirebaseDatabase db2 = FirebaseDatabase.getInstance();
+                DatabaseReference usersRef2 = db2.getReference("myapp1-b1072");
+                usersRef2.child("win").setValue(0);
+                FirebaseDatabase db = FirebaseDatabase.getInstance();
+                DatabaseReference usersRef = db.getReference("myapp1-b1072");
+                usersRef.child("num").setValue(0);
+                //
 
 
                 if (edittextGuessDigits.length() != 1) // 沒輸入猜幾位數時，按鈕無效
@@ -416,6 +430,12 @@ public class ABGuessNumberGame extends Activity {
 
         textviewThisScore.setText(getString(R.string.strScore) + listItems.size() + " 次");
 
+        //firebase 傳次數
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        DatabaseReference usersRef = db.getReference("myapp1-b1072");
+        usersRef.child("num").setValue(listItems.size());
+        //
+
 
         // 清除 edittextGuessNumber 欄位
 
@@ -440,6 +460,13 @@ public class ABGuessNumberGame extends Activity {
             btnGuess.setEnabled(false);
 
             btnGiveUp.setEnabled(false);
+
+            //win 上傳勝利
+
+            FirebaseDatabase db2 = FirebaseDatabase.getInstance();
+            DatabaseReference usersRef2 = db2.getReference("myapp1-b1072");
+            usersRef2.child("win").setValue(1);
+            //
 
 
             if (listItems.size() < intBestScore) // 本次紀錄是最佳紀錄
@@ -517,6 +544,10 @@ public class ABGuessNumberGame extends Activity {
         textviewThisScore.setText(getString(R.string.strScore));
 
         textviewBestScore.setText(getString(R.string.strBestScore));
+
+
+
+
 
 
     }
